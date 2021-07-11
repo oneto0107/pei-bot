@@ -63,5 +63,5 @@ async def on_message(message):
         if message.content == "파이야 사랑해":
             await message.channel.send("개발자 포털이 열렸습니다.")
 
-access_token = os.environ["BOT TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
