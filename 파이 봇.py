@@ -1,10 +1,10 @@
 import discord
 import asyncio
 import random
+import os
 
 client = discord.Client()
 
-token = "ODYzMzUzNTM2NzUwMDI2NzYy.YOlqow.gF3vj-MW7NIancgUQg6c6YNo4iI"
 
 @client.event
 async def on_ready():
@@ -63,5 +63,5 @@ async def on_message(message):
         if message.content == "파이야 사랑해":
             await message.channel.send("개발자 포털이 열렸습니다.")
 
-
-client.run(token)
+access_token = os.environ["BOT TOKEN"]
+client.run(access_token)
